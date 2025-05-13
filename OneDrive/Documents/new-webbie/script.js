@@ -32,3 +32,14 @@ window.addEventListener('resize', () => {
 
 // Start the animation
 animate();
+
+
+// Newsletter subscription prompt
+document.querySelector('a[href="#subscribe"]').addEventListener('click', function (e) {
+    e.preventDefault();
+    const email = prompt("Enter your email address to subscribe to our newsletter:");
+    if (email) {
+        alert(`Thank you for subscribing, ${email}!`);
+        // Optionally: send the email to a server
+    }
+});
